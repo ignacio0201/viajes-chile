@@ -1,0 +1,222 @@
+:root {
+    /*COLORS*/
+    --color-blue-light: #28C2FF;
+    --color-blue-dark: #001D31;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    /* FONT FAMILIES */
+    --font-1: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-1);
+}
+
+/* HEADER */
+.background_header {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-blend-mode: overlay;
+    background-image: url("/assets/img/carousel3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.header {
+    max-width: 1200px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 15px 15px;
+    /* outline: 1px solid blue; */
+}
+
+.header_nav {
+    display: flex;
+    gap: .5em;
+    color: var(--color-white);
+    font-weight: 500;
+    border-radius: 10px;
+    /* outline: solid 1px blue; */
+
+}
+
+/*HEADER LOGO */
+.header_logolink {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.header_logo {
+    width: 70px;
+}
+
+.header_logoname {
+    font-size: 1.9rem;
+    font-weight: 200;
+    align-items: center;
+}
+
+/* HEADER NAV CONTAINER */
+.header_nav_container {
+    display: flex;
+    flex: 1;
+    gap: 1em;
+    justify-content: end;
+    align-items: center;
+    /* outline: solid 1px salmon; */
+}
+
+.header_nav_link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.333);
+    padding: 4px 4px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.header_nav_link:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    padding: 10px 7px;
+
+}
+
+/* SECTION QUIENES SOMOS */
+.background_quienessomos {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-image: url("/assets/img/background_quienessomos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.section_quienessomos {
+    display: flex;
+    flex-direction: column;
+    padding: 85px 15px;
+    color: var(--color-white);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.icon_arrowup {
+    font-size: 2rem;
+    margin: 20px;
+    padding: 10px 15px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-blue-light);
+    color: var(--color-white);
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.icon_arrowup:hover {
+    background-color: var(--color-blue-dark);
+}
+
+.section_quienessomos>h2 {
+    padding-bottom: 50px;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.quienessomos_container {
+    display: flex;
+    gap: 2em;
+    /* outline: 1px solid seagreen; */
+}
+
+article {
+    /* outline: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1em;
+}
+
+article > p {
+    background-color: rgba(0, 0, 0, 0.6);
+    flex: 1;
+    padding: 15px 15px;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    text-align: center;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,208,1) 0%, rgba(0,212,255,1) 100%);
+    border-image-slice: 1; /*Define cómo se corta la imagen del borde (1 = usar todo el gradiente)*/
+    /* border-radius: 10px; */
+    /* box-shadow: 3px 3px 20px black ; */
+    transition: all 0.4s;
+}
+
+article > p:hover{
+    background-color: var(--color-black);
+}
+
+.icons-quienessomos {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    width: 100%;
+    padding: 10px 50px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px black ;
+}
+
+article:nth-child(2) .icons-quienessomos:nth-child(1) {
+    order: 1;
+}
+
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        height: auto;
+    }
+
+    .header_nav {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 0;
+    }
+
+    .header_nav_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header_logolink {
+        justify-content: center;
+    }
+
+    .header_logolink>p {
+        display: none;
+    }
+
+    /* QUIENES SOMOS */
+    .quienessomos_container {
+        flex-direction: column;
+    }
+
+    article:nth-child(2) .icons-quienessomos:nth-child(1) {
+        order: 0;
+    }
+
+}
