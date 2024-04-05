@@ -42,7 +42,6 @@
     font-weight: 500;
     border-radius: 10px;
     /* outline: solid 1px blue; */
-
 }
 
 /*HEADER LOGO */
@@ -59,9 +58,9 @@
 }
 
 .header_logoname {
+    align-items: center;
     font-size: 1.9rem;
     font-weight: 200;
-    align-items: center;
 }
 
 /* HEADER NAV CONTAINER */
@@ -75,20 +74,18 @@
 }
 
 .header_nav_link {
+    padding: 4px 4px;
     text-decoration: none;
     color: var(--color-white);
     font-size: 1rem;
     border: 0.5px solid rgba(255, 255, 255, 0.333);
-    padding: 4px 4px;
     border-radius: 10px;
     transition: all 0.2s;
 }
 
 .header_nav_link:hover {
-    background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
     padding: 10px 7px;
-
 }
 
 /* SECTION QUIENES SOMOS */
@@ -102,14 +99,15 @@
 }
 
 .section_quienessomos {
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     padding: 85px 15px;
-    color: var(--color-white);
-    max-width: 1200px;
     margin: 0 auto;
+    color: var(--color-white);
 }
 
+/* ICON ARROW INICIO */
 .icon_arrowup {
     font-size: 2rem;
     margin: 20px;
@@ -128,7 +126,7 @@
     background-color: var(--color-blue-dark);
 }
 
-.section_quienessomos>h2 {
+.section_quienessomos > h2 {
     padding-bottom: 50px;
     font-size: 3rem;
     font-weight: 400;
@@ -151,16 +149,14 @@ article {
 
 article > p {
     background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,208,1) 0%, rgba(0,212,255,1) 100%);
+    border-image-slice: 1; /*Define cómo se corta la imagen del borde (1 = usar todo el gradiente)*/
     flex: 1;
     padding: 15px 15px;
     font-size: 1.2rem;
     line-height: 1.5em;
     text-align: center;
-    border: 1px solid;
-    border-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,208,1) 0%, rgba(0,212,255,1) 100%);
-    border-image-slice: 1; /*Define cómo se corta la imagen del borde (1 = usar todo el gradiente)*/
-    /* border-radius: 10px; */
-    /* box-shadow: 3px 3px 20px black ; */
     transition: all 0.4s;
 }
 
@@ -171,7 +167,6 @@ article > p:hover{
 .icons-quienessomos {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    width: 100%;
     padding: 10px 50px;
     font-size: 2rem;
     text-align: center;
@@ -206,13 +201,21 @@ article:nth-child(2) .icons-quienessomos:nth-child(1) {
         justify-content: center;
     }
 
-    .header_logolink>p {
+    .header_logolink > p {
         display: none;
     }
 
     /* QUIENES SOMOS */
     .quienessomos_container {
         flex-direction: column;
+    }
+
+    .section_quienessomos > h2{
+        font-size: 2.2rem;
+    }
+
+    article > p {
+        line-height: 1.2em;
     }
 
     article:nth-child(2) .icons-quienessomos:nth-child(1) {
