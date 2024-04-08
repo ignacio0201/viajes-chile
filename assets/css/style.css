@@ -20,7 +20,7 @@
 .background_header {
     background-color: rgba(0, 0, 0, 0.1);
     background-blend-mode: overlay;
-    background-image: url("/assets/img/carousel3.jpg");
+    background-image: url('https://imgur.com/a/pUd9UR9');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
