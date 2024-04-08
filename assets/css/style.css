@@ -60,7 +60,7 @@
 .header_logoname {
     align-items: center;
     font-size: 1.9rem;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 /* HEADER NAV CONTAINER */
@@ -90,7 +90,7 @@
 
 /* SECTION QUIENES SOMOS */
 .background_quienessomos {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
     background-image: url("/assets/img/background_quienessomos.jpg");
     background-repeat: no-repeat;
@@ -126,7 +126,7 @@
     background-color: var(--color-blue-dark);
 }
 
-.section_quienessomos > h2 {
+.section_quienessomos>h2 {
     padding-bottom: 50px;
     font-size: 3rem;
     font-weight: 400;
@@ -147,11 +147,12 @@ article {
     gap: 1em;
 }
 
-article > p {
+article>p {
     background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid;
-    border-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,116,208,1) 0%, rgba(0,212,255,1) 100%);
-    border-image-slice: 1; /*Define cómo se corta la imagen del borde (1 = usar todo el gradiente)*/
+    border-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    border-image-slice: 1;
+    /*Define cómo se corta la imagen del borde (1 = usar todo el gradiente)*/
     flex: 1;
     padding: 15px 15px;
     font-size: 1.2rem;
@@ -160,25 +161,190 @@ article > p {
     transition: all 0.4s;
 }
 
-article > p:hover{
+article>p:hover {
     background-color: var(--color-black);
 }
 
 .icons-quienessomos {
-    background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
     padding: 10px 50px;
     font-size: 2rem;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 3px 3px 20px black ;
+    box-shadow: 3px 3px 20px black;
 }
 
 article:nth-child(2) .icons-quienessomos:nth-child(1) {
     order: 1;
 }
 
+/* SECTION DESTACADOS */
+.background_destacados {
+    background-image: url("/assets/img/background_destacados.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
 
+.section_destacados {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 85px 15px;
+    color: var(--color-white);
+}
+
+.container_cards {
+    display: flex;
+    gap: 1em;
+}
+
+.section_destacados>h2 {
+    padding-bottom: 50px;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section_destacados_cards {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1em;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    border-image-slice: 1;
+    transition: all 0.4s;
+}
+
+.destacados_cardparagraph {
+    flex: 1;
+}
+
+.section_destacados_cards:hover {
+    background-color: var(--color-black);
+}
+
+.section_destacados_cardimg {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destacados_cardbutton {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 600;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.destacados_cardbutton:hover {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(0, 96, 174) 0%, rgb(0, 172, 206) 100%);
+}
+
+/* SECTION CONTACTO */
+.background_contacto {
+    background-color: var(--color-black);
+}
+
+.section_contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 85px 15px;
+    color: var(--color-white);
+}
+
+.contacto_title {
+    padding-bottom: 50px;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contacto_form {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contacto_input {
+    height: 25px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-1);
+}
+
+.contacto_form>textarea {
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: var(--font-1);
+}
+
+.contacto_button {
+    width: 30%;
+    height: 40px;
+    align-self: center;
+    color: var(--color-white);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 116, 208, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-1);
+    font-weight: 600;
+}
+
+/* FOOTER */
+.background_footer {
+    background-color: var(--color-blue-light);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 15px;
+    color: var(--color-white);
+}
+
+.footer_title{
+    font-size: 1.7rem;
+}
+
+.footer_container_icons {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    gap: 1em;
+}
+
+.icons-footer-link{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.icons-footer{
+    font-size: 2.2rem;
+    transition: all 0.4s;
+}
+
+.icons-footer:hover{
+    color: var(--color-blue-dark);
+}
+
+
+/* MEDIA QUERIES TABLET */
 @media (max-width: 768px) {
 
     /* HEADER */
@@ -201,7 +367,7 @@ article:nth-child(2) .icons-quienessomos:nth-child(1) {
         justify-content: center;
     }
 
-    .header_logolink > p {
+    .header_logolink>p {
         display: none;
     }
 
@@ -210,16 +376,52 @@ article:nth-child(2) .icons-quienessomos:nth-child(1) {
         flex-direction: column;
     }
 
-    .section_quienessomos > h2{
+    .section_quienessomos>h2 {
         font-size: 2.2rem;
     }
 
-    article > p {
+    article>p {
         line-height: 1.2em;
     }
 
     article:nth-child(2) .icons-quienessomos:nth-child(1) {
         order: 0;
+    }
+
+    /* DESTACADOS  */
+    .container_cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section_destacados>h2 {
+        font-size: 2.2rem;
+    }
+
+    /* CONTACTO */
+    .contacto_title {
+        font-size: 2.2rem;
+    }
+
+    .contacto_form {
+        width: 70%;
+    }
+
+}
+
+
+/* MEDIA QUERIES PHONE */
+@media (max-width: 375px) {
+    .contacto_form {
+        width: 80%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .footer_container_icons {
+        margin-top: 10px;
     }
 
 }
