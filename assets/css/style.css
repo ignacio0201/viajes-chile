@@ -18,9 +18,9 @@
 
 /* HEADER */
 .background_header {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: overlay;
-    background-image: url('https://imgur.com/a/pUd9UR9');
+    background-image: url('https://media.traveler.es/photos/63842498dd8b4d46721edbb5/16:9/w_1920%2Cc_limit/Salar-de-Aguas-Calientes-Chile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -92,7 +92,7 @@
 .background_quienessomos {
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
-    background-image: url("/assets/img/background_quienessomos.jpg");
+    background-image: url("https://services.meteored.com/img/article/asi-es-el-parque-nacional-torres-del-paine-la-octava-maravilla-del-mundo-1704478946481_1024.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -180,7 +180,7 @@ article:nth-child(2) .icons-quienessomos:nth-child(1) {
 
 /* SECTION DESTACADOS */
 .background_destacados {
-    background-image: url("/assets/img/background_destacados.jpg");
+    background-image: url("https://womantimes.com/wp-content/uploads/2022/09/FKK462AUNRGJHJDESK6PWSN2TE.jpg");
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
